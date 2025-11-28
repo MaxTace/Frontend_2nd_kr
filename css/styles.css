@@ -87,10 +87,19 @@ body.theme-dark {
   transition: all 0.3s ease;
   font-weight: 500;
 }
+.nav-link:focus{
+  outline: none;
+ border-color: #0066cc;
+ background: #00f2fe;
+}
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
+.nav-link[aria-current="page"] {
+ background: #00a6c4;
+ color: white;
+ }
 main.content {
   padding: 40px;
   min-width: 800px;
@@ -650,3 +659,31 @@ a, button, input, textarea {
  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 /
 0.1);
 }
+@media (min-height: 800px) and (min-width: 1200px) {
+ .project-photo {
+ height: 250px;
+ }
+}
+@media (min-height: 800px) and (min-width: 1200px) {
+ .hero__photo {
+ height: 250px;
+ }
+}
+.contactModal {
+ display: none;
+ position: fixed;
+ top: 50%; left: 50%;
+ transform: translate(-50%, -50%);
+ background: white;
+ padding: 20px;
+ border: 1px solid #ccc;
+ z-index: 1000;
+ }
+ .overlay {
+ display: none;
+ position: fixed;
+ top: 0; left: 0;
+ width: 100%; height: 100%;
+ background: rgba(0,0,0,0.5);
+ z-index: 999;
+ }
